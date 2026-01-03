@@ -62,6 +62,8 @@
 以下の **最小構成の API フロー** により、  
 AWS 上でバックエンドが正常に動作することを確認しました。
 
+---
+
 ### 1. EC2 上でのアプリケーション起動
 
 Spring Boot アプリケーションを JAR 形式で EC2 上にデプロイし、  
@@ -76,7 +78,11 @@ Linux 環境上で正常に起動することを確認。
 ログイン API を実行し、  
 JWT トークンが正常に発行されることを確認。
 
-![Login API](./screenshots/login.png)
+**Request**
+![Login Request](./screenshots/login_request.png)
+
+**Response**
+![Login Response](./screenshots/login_response.png)
 
 ---
 
@@ -86,16 +92,28 @@ Authorization ヘッダに JWT を付与し、
 認証必須の API が正常に実行できることを確認。  
 作成データが RDS に保存されることを検証。
 
-![Create Ticket](./screenshots/create_ticket.png)
+**Request**
+![Create Ticket Request](./screenshots/create_ticket_request.png)
+
+**Response**
+![Create Ticket Response](./screenshots/create_ticket_response.png)
 
 ---
 
-### 4. 工単一覧取得 API
+### 4. 工単一覧取得 API（認証必須）
 
-作成した工単データが一覧取得 API により取得できることを確認し、  
-**EC2 ⇄ Application ⇄ RDS 間のデータ連携が正常に動作していることを検証**。
+認証済みユーザーとして工単一覧取得 API を実行し、  
+作成した工単データが正常に取得できることを確認。
 
-![List Ticket](./screenshots/list_ticket.png)
+これにより、  
+**EC2 ⇄ Application ⇄ RDS 間のデータ連携が一連のフローとして  
+正常に動作していることを検証**。
+
+**Request**
+![List Ticket Request](./screenshots/list_ticket_request.png)
+
+**Response**
+![List Ticket Response](./screenshots/list_ticket_response.png)
 
 ---
 
