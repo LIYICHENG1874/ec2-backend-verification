@@ -1,3 +1,3 @@
 ### List Tickets (JWT protected)
-GET http://98.92.87.117:8080/api/tickets?page=1&size=5
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzIiwicm9sZSI6IkFHRU5UIiwidXNlcm5hbWUiOiJ0ZXN0IiwiaWF0IjoxNzY3MzQ2NTIxLCJleHAiOjE3Njc0MzI5MjF9.LmSN4DVXIGfonakyXITOoUwBNykK7AHtPp3DyiuaNew
+GET {{baseUrl}}/api/tickets?page=1&size=5
+Authorization: Bearer {{jwtToken}}

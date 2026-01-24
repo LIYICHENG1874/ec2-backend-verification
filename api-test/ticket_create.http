@@ -1,6 +1,6 @@
 ### Create Ticket (JWT protected)
-POST http://98.92.87.117:8080/api/tickets
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzIiwicm9sZSI6IkFHRU5UIiwidXNlcm5hbWUiOiJ0ZXN0IiwiaWF0IjoxNzY3MzQ2NTIxLCJleHAiOjE3Njc0MzI5MjF9.LmSN4DVXIGfonakyXITOoUwBNykK7AHtPp3DyiuaNew
+POST {{baseUrl}}/api/tickets
+Authorization: Bearer {{jwtToken}}
 Content-Type: application/json
 
 {
